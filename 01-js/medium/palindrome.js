@@ -4,7 +4,15 @@
 */
 
 function isPalindrome(str) {
-  return true;
-}
+  let a = str.toLowerCase().replace(/[.,?\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+  a = a.replace(/ /g,'')
+  rev_str = "";
+  for (let i = a.length - 1; i >= 0; i--) {
+          rev_str = rev_str+a[i];
+    
+  }
 
+  return a==rev_str;
+}
+console.log(isPalindrome("nitin?"))
 module.exports = isPalindrome;
