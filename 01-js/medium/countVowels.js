@@ -18,7 +18,4 @@ function countVowels(str) {
   }
   return counter
 }
-
-console.log(countVowels('OpenAI'))
-
 module.exports = countVowels;
