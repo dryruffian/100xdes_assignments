@@ -31,14 +31,14 @@ function getSlice(str, start, end) {
   console.log("Original String:", str);
   console.log("After slice:", str.slice(start, end));
 }
-getSlice("AdityaRaj", 1, 3);
+getSlice("AdityaRaj", 1, 5);
 
 // substring
 function getSubstring(str, start, end) {
   console.log("Original String:", str);
-  console.log("After substring:", str.substring(start, end));
+  console.log("After substring:", str.substr(start, end));
 }
-getSubstring("AdityaRaj", 1, 3);
+getSubstring("AdityaRaj", 1, 5);
 
 // replace
 function replaceString(str, target, replacement) {
