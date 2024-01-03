@@ -10,15 +10,18 @@ There is no automated test for this one, this is more for you to understand time
 
 function calculateTime(n) {
     let value = 0;
-    let intial_time = Date.now();
+    let intial_time = new Date();
+    let a = intial_time.getTime()
     // console.log(intial_time)
     for (let index = 1; index < n+1; index++) {
         value = value + index;
     }
+    let Final_time = new Date();
+    let b = Final_time.getTime()
     console.log(value)
-    console.log(Date.now() - intial_time)
+    console.log("It takes " + ((b - a)/1000) + " seconds to run the program")
 
     return 0.01;
 }
 
-calculateTime(100000000)
+calculateTime(10000000000)
