@@ -1,10 +1,19 @@
-const express = require("express");
-const app = express();
-const port = 3000;
-app.get('/',(req,res) =>{
-    res.send('my name is aditya')
-});
+const experss = require('express')
+function calculateSum(n){
+    var ans = 0
+    for (let i = 0; i <= n; i++) {
+        ans = ans + i;
+        }
+        return ans
+}
 
-app.listen(port,() =>{
-    console.log(`example app listening on port ${port}`)
-});
+console.log(calculateSum(30))
+const app = experss()
+
+app.get("/",function(req,res){
+    const n = req.query.n;
+    ans = calculateSum(n)
+    res.sendStatus(ans.toString())
+})
+
+app.listen(3000)
