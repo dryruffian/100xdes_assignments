@@ -46,4 +46,20 @@
   
   app.use(bodyParser.json());
   
-  module.exports = app;
+  let todos = []
+
+  app.get('/todos',function (_req, res) {
+      res.json(todos);
+    })
+
+  app.get('/todos/:id',function (req, res) {
+      const todo = todos.find(t => t.id === parseInt(req.params.id));
+      if (!todo) {
+        res.status(404).send();
+      } else {
+        res.json(todo);
+      }
+    });
+
+
+  module.exports = app; 
