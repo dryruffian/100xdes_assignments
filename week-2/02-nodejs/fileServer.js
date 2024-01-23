@@ -17,5 +17,13 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 
+app.get('/files',function(req,res){
+  fs.readdir('./',function(err,files){
+    if(err){
+      return res.status(500).json({error:'Falied to retrive file'});
+    }
+    res.json(files);
+  })
+})
 
 module.exports = app;
