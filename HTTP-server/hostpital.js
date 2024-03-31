@@ -13,7 +13,7 @@ var user = [{
 app.use(express.json()); // Middleware for parsing JSON in request body
 
 app.get("/", function (req, res) {
-    const johnkidney = user[0 ].kidney;
+    const johnkidney = user[0].kidney;
     const numberofkidneys = johnkidney.length;
     let numberofhealthykidneys = 0;
 
@@ -65,6 +65,7 @@ app.delete("/",function(req,res){
         msg : "done"
     })  
 })
+
 
 
 app.listen(3000, () => {
